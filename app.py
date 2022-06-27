@@ -1,11 +1,13 @@
-from flask import Flask
-
+from flask import Flask, render_template,request
 app = Flask(__name__)
 
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return "Flask app is running"
+    mssg="starting of testing"
+    return render_template('result.html',mssg=mssg)
+
+
 
 
 if __name__ == "__main__":

@@ -95,7 +95,7 @@ workflows:
 ## to create requirements.txt
 
 ```buildoutcfg
-pip freeze>requirements.txt
+#pip freeze>requirements.txt
 ```
 
 ## initialize git repo
