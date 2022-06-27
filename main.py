@@ -1,5 +1,5 @@
 
-from flask import Flask
+from flask import Flask,render_template,request
 
 from wsgiref import simple_server
 
@@ -15,7 +15,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return "Flask app is running and I am changing something."
+    mssg = "starting of testing"
+    return render_template('result.html', mssg=mssg)
 
 port = int(os.getenv("PORT", 5001))
 
